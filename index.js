@@ -6,7 +6,7 @@ const server = express();
 const PORT = 5050;
 
 
-const supplierRouter = require('./routers/supplier_router');
+const supplierRouter = require('./routers/suppliers_router');
 const itemRouter = require('./routers/item_router');
 
 
