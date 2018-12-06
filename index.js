@@ -3,7 +3,7 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 
 const server = express();
-const PORT = 5050;
+const PORT = process.env.PORT || 5050;
 
 
 const supplierRouter = require('./routers/suppliers_router');
@@ -15,6 +15,7 @@ server.use(
     helmet(),
     morgan('dev')
 );
+
 
 
 server.use('/api/suppliers', supplierRouter);
